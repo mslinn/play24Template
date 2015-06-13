@@ -1,6 +1,5 @@
 import sbt._
 import sbt.Keys._
-import play.Project._
 import java.nio.charset.StandardCharsets.UTF_8
 
 // Adapted from: https://github.com/yesnault/Play20StartApp

@@ -1,6 +1,5 @@
 import sbt._
 import Keys._
-import play.Project._
 
 // Adapted from https://github.com/ymasory/sbt-code-quality.g8
 object CheckstyleSettings {
