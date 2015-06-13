@@ -1,0 +1,56 @@
+# This file defines all application routes (Higher priority routes first)
+
+# exact match:
+GET         /                                            controllers.Application.welcome()
+GET         /includer                                    controllers.Application.includer()
+GET         /bodyParsers                                 controllers.Application.bodyParsers()
+POST        /bodyParsers                                 controllers.Application.bodyParsers()
+GET         /flashing                                    controllers.Application.flashing()
+POST        /multiParseHtml                              controllers.Application.multiParse()
+POST        /multiParse                                  controllers.Application.multiParse()
+GET         /programming                                 controllers.Application.programming()
+GET         /warning                                     controllers.Application.warningPage()
+
+# One dynamic part
+GET         /int/:i                                      controllers.Application.int(i: Int)
+GET         /long/:j                                     controllers.Application.long(j: Long)
+GET         /uuid/:uid                                   controllers.Application.uuid(uid: java.util.UUID)
+
+# Regex with two dynamic parts
+GET         /items/$width<[0-9]+>x$height<[0-9]+>        controllers.Application.dimensions(width: Int, height: Int)
+
+# One dynamic part
+GET         /string1/:s                                  controllers.Application.string1(s: String)
+
+# Two dynamic parts
+GET         /:s/:t                                       controllers.Application.string2(s: String, t: String)
+
+# Two dynamic parts (queryString parameters)
+GET         /qs                                          controllers.Application.qs(size: Int, name: String)
+
+# Four dynamic parts: two URL parameters and two queryString parameters
+GET         /qs2/:b/:l                                   controllers.Application.qs2(b: Boolean, l: Long, size: Int, name: String)
+
+# exact match:
+POST        /parse/raw                                   controllers.Application.parseRaw()
+POST        /parse/text                                  controllers.Application.parseText()
+POST        /parse/tolerantText                          controllers.Application.parseTolerantText()
+POST        /parse/json                                  controllers.Application.parseJson()
+POST        /parse/tolerantJson                          controllers.Application.parseTolerantJson()
+POST        /parse/xml                                   controllers.Application.parseXml()
+POST        /parse/tolerantXml                           controllers.Application.parseTolerantXml()
+POST        /parse/form                                  controllers.Application.parseForm()
+POST        /parse/tolerantForm                          controllers.Application.parseTolerantForm()
+POST        /parse/file                                  controllers.Application.parseFile()
+
+GET         /ajaxPage1                                   controllers.AjaxController.index
+POST        /obtainScope                                 controllers.AjaxController.obtainScope
+POST        /obtainScope2                                controllers.AjaxController.obtainScope2
+
+GET         /ajaxPage2                                   controllers.AjaxController.index2
+POST        /ajaxUpload                                  controllers.AjaxController.ajaxUpload
+GET         /javascriptRoutes                            controllers.AjaxController.javascriptRoutes
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                                controllers.Assets.at(path="/public", file)
+GET         /webjars/*file                               controllers.WebJarAssets.at(file)
