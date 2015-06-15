@@ -1,9 +1,11 @@
 import sbt._
 import sbt.Keys._
 
-name         := "play24Template"
+name         := "changeMe"
 organization := "com.micronautics"
 version      := "0.1.0"
+
+herokuAppName in Compile := "changeMe"
 
 scalaVersion := "2.11.6"
 
