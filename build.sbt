@@ -65,6 +65,7 @@ initialCommands := """ // make app resources accessible
                      |//val sources = None
                      |//val applicationMode = Mode.Dev
                      |//Play.start(new DefaultApplication(applicationPath, classLoader, sources, applicationMode))
+                     |import scala.language.postfixOps
                      |import com.github.tototoshi.slick.JodaSupport._
                      |import java.net.URL
                      |import java.text.DateFormat
