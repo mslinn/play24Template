@@ -1,24 +1,18 @@
-import org.specs2.mutable._
-import org.specs2.runner._
-import org.junit.runner._
-
 import play.api.test._
 import play.api.test.Helpers._
+import org.scalatest._
+import play.test.WithApplication
 
-@RunWith(classOf[JUnitRunner])
-class ApplicationSpec extends Specification {
-
+class ApplicationSpec extends WordSpec with MustMatchers {
   "Application" should {
-
     "send 404 on a bad request" in new WithApplication {
-      route(FakeRequest(GET, "/boum")) must beNone
+      route(FakeRequest(GET, "/boum")) mustBe None
     }
 
     "render the index page" in new WithApplication{
       val home = route(FakeRequest(GET, "/")).get
-
-      status(home) must equalTo(OK)
-      contentType(home) must beSome.which(_ == "text/html")
+      status(home) must equal(OK)
+      contentType(home) mustBe Some("text/html")
     }
   }
 }

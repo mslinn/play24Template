@@ -35,7 +35,7 @@ libraryDependencies ++= Seq(
   "org.webjars"            %  "jquery-ui"          % "1.10.2-1",
   "org.webjars"            %  "jquery-ui-themes"   % "1.10.0",
   //
-  "org.scalatestplus"      %% "play"               % "1.2.0" % "test" withSources(),
+  "org.scalatestplus"      %% "play"               % "1.4.0-M3" % "test" withSources(),
   "junit"                  %  "junit"              % "4.8.1" % "test"
 )
 
