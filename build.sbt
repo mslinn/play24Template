@@ -40,6 +40,7 @@ libraryDependencies ++= Seq(
 )
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
+enablePlugins(ApiMappings)
 
 javaOptions in Test ++= Seq("-Dconfig.file=conf/dev.conf")
 logBuffered in Test := false
