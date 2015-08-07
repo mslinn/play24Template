@@ -4,9 +4,9 @@
     <head>
       <title>@title</title>
       <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-      <script src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
-      <script src='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.js"))'></script>
-      <link href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.min.css"))' rel="stylesheet" />
+      <script src='@webjar("jquery.min.js")'></script>
+      <script src='@webjar("bootstrap.min.js")'></script>
+      <link href='@webjar("css/bootstrap.min.css")' rel="stylesheet" />
       <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
     </head>
     <body>

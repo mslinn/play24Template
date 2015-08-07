@@ -14,7 +14,7 @@ object menu {
     Html(s"""<nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
             |  <ul class="nav navbar-nav">
             |    ${listItem(route.hello("Everybody"), "Welcome")}
-            |    ${listItem(route.welcome, "Help")}
+            |    ${listItem(route.help, "Help")}
             |  </ul>
             |  <ul class="nav navbar-nav">
             |  </ul>
