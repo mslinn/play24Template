@@ -21,7 +21,7 @@ libraryDependencies ++= Seq(
   evolutions,
   filters,
   json,
-  "com.typesafe.play"      %% "anorm"              % "2.4.0" withSources(),
+  "com.typesafe.play"      %% "anorm"              % "2.5.0" withSources(),
   "com.typesafe.play"      %% "play-ebean"         % "1.0.0" withSources(),
   "com.typesafe.play"      %% "play-mailer"        % "3.0.1" withSources(),
   "com.typesafe.akka"      %% "akka-slf4j"         % "2.3.9",
