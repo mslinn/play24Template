@@ -57,31 +57,18 @@ resolvers ++= Seq(
 )
 
 // define the statements initially evaluated when entering 'console', 'console-quick', or 'console-project'
-initialCommands := """ // make app resources accessible
-                     |Thread.currentThread.setContextClassLoader(getClass.getClassLoader)
-                     |new play.core.StaticApplication(new java.io.File("."))
-                     |
-                     |//import play.api.{ DefaultApplication, Mode, Play }
-                     |//val applicationPath = new java.io.File(".")
-                     |//val classLoader = this.getClass.getClassLoader
-                     |//val sources = None
-                     |//val applicationMode = Mode.Dev
-                     |//Play.start(new DefaultApplication(applicationPath, classLoader, sources, applicationMode))
-                     |import scala.language.postfixOps
-                     |import com.github.tototoshi.slick.JodaSupport._
+initialCommands := """import scala.language.postfixOps
                      |import java.net.URL
                      |import java.text.DateFormat
                      |import java.util.Locale
-                     |import org.joda.time._
-                     |import org.joda.time.format.{DateTimeFormat, DateTimeFormatter}
+                     |import play.api._
                      |import play.api.db.DB
+                     |import play.api.i18n._
                      |import play.api.libs.json._
                      |import play.api.Play.current
                      |import play.Logger
-                     |import scala.slick.driver.PostgresDriver.simple._
                      |import scala.reflect.runtime.universe._
                      |import views.html.helper._
-                     |import views.html.tags._
                      |""".stripMargin
 
 logLevel := Level.Warn
