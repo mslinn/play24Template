@@ -47,9 +47,6 @@ logBuffered in Test := false
 Keys.fork in Test := false
 //parallelExecution in Test := false
 
-
-fork in run := true
-
 resolvers ++= Seq(
   "webjars" at "http://webjars.github.com/m2",
   //Resolver.file("Local Repository", file(sys.env.get("PLAY_HOME").map(_ + "/repository/local").getOrElse("")))(Resolver.ivyStylePatterns),
